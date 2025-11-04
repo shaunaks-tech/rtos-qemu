@@ -1,0 +1,26 @@
+manifest:
+  self:
+    path: example-application
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+  projects:
+    - name: zephyr
+      revision: v4.2.0
+      remote: zephyrproject-rtos
+      import:
+        path-prefix: modules
+        name-allowlist:
+          - hal
+          - cmsis
+          - tinycbor
+          - mbedtls
+          - segger
+          - libmetal
+          - open-amp
+          - canopennode
+          - lvgl
+          - littlefs
+          - sof
+  defaults:
+    remote: zephyrproject-rtos
